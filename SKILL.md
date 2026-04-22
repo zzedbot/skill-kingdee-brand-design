@@ -376,20 +376,24 @@ export const kingdeeBrandTokens = {
 | 文件 | 类型 | 说明 | 使用场景 |
 |------|------|------|----------|
 | `kingdee-logo.svg` | SVG | 金蝶英文 Logo | 国际场合、英文文档、网站 |
+| `kingdee-logo-cn.svg` | SVG | 金蝶中文 Logo（**首选**） | 中国内地、中文文档、演示文稿 |
+| `kingdee-logo-cn.png` | PNG | 金蝶中文 Logo（备用） | SVG 不可用时的备选方案 |
 | `kingdee-dots.svg` | SVG | 金蝶圆点独立 Logo | 应用图标、favicon、简洁场景 |
-| `kingdee-logo-cn.png` | PNG | 金蝶中文 Logo | 中国内地、中文文档、演示文稿 |
 
 ### 使用方式
 
 **HTML 页面引用：**
 ```html
+<!-- 中文 Logo（首选 SVG） -->
+<img src="assets/kingdee-logo-cn.svg" alt="金蝶 Logo" height="40">
+
 <!-- 英文 Logo -->
 <img src="assets/kingdee-logo.svg" alt="Kingdee Logo" height="40">
 
 <!-- 圆点 Logo -->
 <img src="assets/kingdee-dots.svg" alt="Kingdee Dots" height="40">
 
-<!-- 中文 Logo -->
+<!-- 中文 Logo（备用 PNG，当 SVG 不被支持时） -->
 <img src="assets/kingdee-logo-cn.png" alt="金蝶 Logo" height="40">
 ```
 
@@ -398,13 +402,35 @@ export const kingdeeBrandTokens = {
 
 ### Logo 选择指南
 
-| 场景 | 推荐 Logo |
-|------|----------|
-| 中文文档/演示 | `kingdee-logo-cn.png` |
-| 英文文档/网站 | `kingdee-logo.svg` |
-| 应用图标/头像 | `kingdee-dots.svg` |
-| 简洁设计 | `kingdee-dots.svg` |
-| 正式场合 | `kingdee-logo-cn.png` 或 `kingdee-logo.svg` |
+#### 优先使用 SVG 格式
+
+**SVG 格式优势：**
+- ✅ 矢量图形，任意缩放不失真
+- ✅ 文件体积小（SVG 约 23KB vs PNG 约 512KB）
+- ✅ 支持 CSS 样式和动画
+- ✅ 屏幕适配更好（Retina 显示屏友好）
+
+**使用原则：**
+1. **优先使用 SVG 版本**（`kingdee-logo-cn.svg`）
+2. **仅在以下情况使用 PNG 备用**：
+   - 目标平台不支持 SVG（如旧版 Word、某些邮件客户端）
+   - 需要透明背景但 SVG 渲染有问题
+   - 性能要求极高的场景（PNG 可能在某些情况下缓存更好）
+
+#### 场景推荐
+
+| 场景 | 推荐 Logo | 格式 |
+|------|----------|------|
+| HTML 页面/网站 | `kingdee-logo-cn.svg` | SVG ✅ |
+| 中文文档/演示 | `kingdee-logo-cn.svg` | SVG ✅ |
+| 英文文档/网站 | `kingdee-logo.svg` | SVG ✅ |
+| 应用图标/头像 | `kingdee-dots.svg` | SVG ✅ |
+| Word 文档（新版） | `kingdee-logo-cn.svg` | SVG ✅ |
+| Word 文档（旧版） | `kingdee-logo-cn.png` | PNG (备用) |
+| PowerPoint（新版） | `kingdee-logo-cn.svg` | SVG ✅ |
+| PowerPoint（旧版） | `kingdee-logo-cn.png` | PNG (备用) |
+| 邮件签名 | `kingdee-logo-cn.png` | PNG (兼容性) |
+| 简洁设计 | `kingdee-dots.svg` | SVG ✅ |
 
 ---
 
