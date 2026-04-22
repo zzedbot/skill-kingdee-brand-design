@@ -391,20 +391,7 @@ export const kingdeeBrandTokens = {
 
 ---
 
-## 参考资源
 
-品牌规范源文件位于：`/zed/workspace/projects/kingdee-design/`
-
-| 文件 | 说明 |
-|------|------|
-| `brand-guidelines.md` | 品牌规范文档 |
-| `design-tokens.json` | 设计令牌 JSON |
-| `design-tokens.css` | 设计令牌 CSS |
-| `design-tokens.ts` | 设计令牌 TypeScript |
-| `2025 金蝶品牌 VI.ai` | 原始 AI 设计文件 |
-| `2024 金蝶品牌手册.pdf` | 原始 PDF 手册 |
-
----
 
 ## 工作流程示例
 
