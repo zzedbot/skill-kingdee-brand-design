@@ -378,20 +378,28 @@ export const kingdeeBrandTokens = {
 | `kingdee-logo.svg` | SVG | 金蝶英文 Logo | 国际场合、英文文档、网站 |
 | `kingdee-logo-cn.svg` | SVG | 金蝶中文 Logo（**首选**） | 中国内地、中文文档、演示文稿 |
 | `kingdee-logo-cn.png` | PNG | 金蝶中文 Logo（备用） | SVG 不可用时的备选方案 |
+| `kingdee-logo-white.svg` | SVG | 金蝶英文 Logo（**反白版**） | 深色背景、图片背景 |
 | `kingdee-dots.svg` | SVG | 金蝶圆点独立 Logo | 应用图标、favicon、简洁场景 |
+| `kingdee-dots-white.svg` | SVG | 金蝶圆点独立 Logo（**反白版**） | 深色背景、图片背景 |
 
 ### 使用方式
 
 **HTML 页面引用：**
 ```html
-<!-- 中文 Logo（首选 SVG） -->
+<!-- 中文 Logo（浅色背景，首选 SVG） -->
 <img src="assets/kingdee-logo-cn.svg" alt="金蝶 Logo" height="40">
 
-<!-- 英文 Logo -->
+<!-- 英文 Logo（浅色背景） -->
 <img src="assets/kingdee-logo.svg" alt="Kingdee Logo" height="40">
 
-<!-- 圆点 Logo -->
+<!-- 中文 Logo 反白版（深色背景） -->
+<img src="assets/kingdee-logo-white.svg" alt="金蝶 Logo" height="40">
+
+<!-- 圆点 Logo（浅色背景） -->
 <img src="assets/kingdee-dots.svg" alt="Kingdee Dots" height="40">
+
+<!-- 圆点 Logo 反白版（深色背景） -->
+<img src="assets/kingdee-dots-white.svg" alt="Kingdee Dots" height="40">
 
 <!-- 中文 Logo（备用 PNG，当 SVG 不被支持时） -->
 <img src="assets/kingdee-logo-cn.png" alt="金蝶 Logo" height="40">
@@ -419,6 +427,8 @@ export const kingdeeBrandTokens = {
 
 #### 场景推荐
 
+##### 浅色/白色背景（使用标准色 Logo）
+
 | 场景 | 推荐 Logo | 格式 |
 |------|----------|------|
 | HTML 页面/网站 | `kingdee-logo-cn.svg` | SVG ✅ |
@@ -431,6 +441,21 @@ export const kingdeeBrandTokens = {
 | PowerPoint（旧版） | `kingdee-logo-cn.png` | PNG (备用) |
 | 邮件签名 | `kingdee-logo-cn.png` | PNG (兼容性) |
 | 简洁设计 | `kingdee-dots.svg` | SVG ✅ |
+
+##### 深色/图片背景（使用反白版 Logo）
+
+| 场景 | 推荐 Logo | 格式 |
+|------|----------|------|
+| 深色背景页面 | `kingdee-logo-white.svg` | SVG ✅ |
+| 深色背景 PPT | `kingdee-logo-white.svg` | SVG ✅ |
+| 图片背景（暗色） | `kingdee-logo-white.svg` | SVG ✅ |
+| 深色模式 UI | `kingdee-dots-white.svg` | SVG ✅ |
+| 夜间模式应用 | `kingdee-dots-white.svg` | SVG ✅ |
+
+**反白版使用原则：**
+- 背景 K 值 ≥ 60（深色）时使用反白版
+- 确保 Logo 与背景有足够的明度对比
+- 避免在复杂/杂乱的图片背景上使用
 
 ---
 
