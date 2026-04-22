@@ -369,6 +369,45 @@ export const kingdeeBrandTokens = {
 
 ---
 
+## Logo 资源文件
+
+技能 bundled 包含以下 Logo 资源文件（位于 `assets/` 目录）：
+
+| 文件 | 类型 | 说明 | 使用场景 |
+|------|------|------|----------|
+| `kingdee-logo.svg` | SVG | 金蝶英文 Logo | 国际场合、英文文档、网站 |
+| `kingdee-dots.svg` | SVG | 金蝶圆点独立 Logo | 应用图标、favicon、简洁场景 |
+| `kingdee-logo-cn.png` | PNG | 金蝶中文 Logo | 中国内地、中文文档、演示文稿 |
+
+### 使用方式
+
+**HTML 页面引用：**
+```html
+<!-- 英文 Logo -->
+<img src="assets/kingdee-logo.svg" alt="Kingdee Logo" height="40">
+
+<!-- 圆点 Logo -->
+<img src="assets/kingdee-dots.svg" alt="Kingdee Dots" height="40">
+
+<!-- 中文 Logo -->
+<img src="assets/kingdee-logo-cn.png" alt="金蝶 Logo" height="40">
+```
+
+**Word/PPT 插入：**
+使用 `anthropic-docx` 或 `anthropic-pptx` 技能时，可引用这些 Logo 文件插入到文档中。
+
+### Logo 选择指南
+
+| 场景 | 推荐 Logo |
+|------|----------|
+| 中文文档/演示 | `kingdee-logo-cn.png` |
+| 英文文档/网站 | `kingdee-logo.svg` |
+| 应用图标/头像 | `kingdee-dots.svg` |
+| 简洁设计 | `kingdee-dots.svg` |
+| 正式场合 | `kingdee-logo-cn.png` 或 `kingdee-logo.svg` |
+
+---
+
 ## 使用禁忌
 
 ### ❌ 禁止行为
